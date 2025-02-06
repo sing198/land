@@ -1,0 +1,71 @@
+services:
+  # 1. Database (MariaDB 11)
+  db:
+    image: mariadb:11.4
+    container_name: alro_land_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root_secure_password_2026
+      MYSQL_DATABASE: alro_land
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./backend/database/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+      - ./backend/database/seed.sql:/docker-entrypoint-initdb.d/02-seed.sql:ro
+    ports:
+      - "3306:3306"
+    networks:
+      - alro_network
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # 2. Backend (Node.js REST API)
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: alro_land_backend
+    restart: always
+    environment:
+      PORT: 3000
+      NODE_ENV: production
+      DB_HOST: db
+      DB_PORT: 3306
+      DB_USER: root
+      DB_PASSWORD: root_secure_password_2026
+      DB_NAME: alro_land
+      JWT_SECRET: super_secret_jwt_key_cloud_production_alro_2026
+      JWT_EXPIRES_IN: 7d
+      CORS_ORIGIN: "*"
+      UPLOAD_PATH: ./uploads
+    volumes:
+      - uploads_data:/app/uploads
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - alro_network
+
+  # 3. Frontend (Vue 3 + Nginx)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: alro_land_frontend
+    restart: always
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+    networks:
+      - alro_network
+
+volumes:
+  db_data:
+  uploads_data:
+
+networks:
+  alro_network:
+    driver: bridge

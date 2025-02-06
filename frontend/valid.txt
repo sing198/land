@@ -1,0 +1,116 @@
+<template>
+    <div>
+      <form @submit.prevent="submitCitizen">
+        <div v-for="(value, key) in formPeopleData" :key="key" class="form-group">
+          <label :for="key">{{ key }}</label>
+          <input
+            :id="key"
+            v-model="formPeopleData[key]"
+            @change="validateField(key)"
+            class="form-control"
+            :class="{ 'is-invalid': errors[key] }"
+          />
+          <span v-if="errors[key]" class="text-danger">{{ errors[key] }}</span>
+        </div>
+        <button type="submit" :disabled="isSubmitting" class="btn btn-primary">Submit</button>
+      </form>
+    </div>
+  </template>
+  
+  <script>
+  import * as yup from "yup";
+  import { getPeopleModel } from "@/model/peopleModel";
+  
+  export default {
+    data() {
+      return {
+        formPeopleData: { ...getPeopleModel }, // Use getPeopleModel as the base structure
+        errors: {}, // Stores validation errors
+        isSubmitting: false,
+      };
+    },
+    methods: {
+      // Validation schema for the form
+      getValidationSchema() {
+        return yup.object().shape({
+          prefix: yup.string().required("Prefix is required"),
+          firstName: yup.string().required("First name is required"),
+          lastName: yup.string().required("Last name is required"),
+          birthDate: yup.date().required("Birthdate is required"),
+          phone: yup
+            .string()
+            .matches(/^\d{10}$/, "Phone must be 10 digits")
+            .required("Phone is required"),
+          citizenId: yup
+            .string()
+            .matches(/^\d{13}$/, "Citizen ID must be 13 digits")
+            .required("Citizen ID is required"),
+          gender: yup.string().required("Gender is required"),
+          selectedSoi: yup.string().required("Soi is required"),
+          subdistrict: yup.string().required("Subdistrict is required"),
+          village: yup.string().required("Village is required"),
+        });
+      },
+  
+      // Validate individual fields
+      async validateField(field) {
+        try {
+          const schema = this.getValidationSchema();
+          await schema.validateAt(field, this.formPeopleData);
+          this.errors[field] = ""; // Clear error if valid
+        } catch (err) {
+          this.errors[field] = err.message; // Set error message
+        }
+      },
+  
+      // Validate the entire form before submission
+      async validateForm() {
+        try {
+          const schema = this.getValidationSchema();
+          await schema.validate(this.formPeopleData, { abortEarly: false });
+          this.errors = {}; // Clear all errors if valid
+          return true;
+        } catch (err) {
+          this.errors = err.inner.reduce((acc, curr) => {
+            acc[curr.path] = curr.message;
+            return acc;
+          }, {});
+          return false;
+        }
+      },
+  
+      // Form submission handler
+      async submitCitizen() {
+        const isValid = await this.validateForm();
+        if (!isValid) {
+          console.error("Validation failed:", this.errors);
+          return;
+        }
+  
+        // Submit the form data if valid
+        console.log("Form data:", this.formPeopleData);
+        try {
+          this.isSubmitting = true;
+          const response = await axios.post("http://localhost:3000/people", this.formPeopleData);
+          console.log("Response:", response.data);
+          alert("Form submitted successfully!");
+          this.isSubmitting = false;
+        } catch (error) {
+          console.error("Submission error:", error);
+          alert("Failed to submit the form!");
+          this.isSubmitting = false;
+        }
+      },
+    },
+  };
+  </script>
+  
+  <style>
+  .is-invalid {
+    border-color: red;
+  }
+  .text-danger {
+    font-size: 0.875rem;
+  }
+  </style>
+  

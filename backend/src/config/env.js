@@ -14,6 +14,7 @@ const env = {
     PASSWORD: process.env.DB_PASSWORD || '',
     NAME: process.env.DB_NAME || 'alro_land',
     CONNECTION_LIMIT: parseInt(process.env.DB_CONNECTION_LIMIT || '10', 10),
+    SSL: process.env.DB_SSL === 'true' || process.env.DB_HOST?.includes('aivencloud.com'),
   },
   JWT: {
     SECRET: process.env.JWT_SECRET || 'default_jwt_secret_please_change_in_production',

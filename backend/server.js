@@ -17,20 +17,14 @@ app.use(helmet({
   crossOriginResourcePolicy: { policy: 'cross-origin' }
 }));
 
-// 2. CORS Configuration
+// 2. CORS Configuration (Support all origins, Vercel deployments, and localhost)
 app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (e.g. mobile apps, curl) or matching origins
-    if (!origin || env.CORS_ORIGIN.includes(origin) || env.NODE_ENV === 'development') {
-      callback(null, true);
-    } else {
-      callback(new Error('CORS Policy: Origin not allowed'));
-    }
-  },
+  origin: true,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],
-  allowedHeaders: ['Content-Type', 'Authorization']
+  allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With', 'Accept']
 }));
+app.options('*', cors());
 
 // 3. Request Logging
 if (env.NODE_ENV === 'development') {
@@ -59,8 +53,20 @@ app.use(express.urlencoded({ extended: true, limit: '10mb' }));
 // 6. Serve Static Uploaded Files
 app.use('/uploads', express.static(path.resolve(__dirname, 'uploads')));
 
-// 7. Mount Main API Routes
+// Root Health Check Route
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: 'ALRO Land & Citizen Management System API is running online',
+    status: 'healthy',
+    api_base: '/api/v1'
+  });
+});
+
+// 7. Mount Main API Routes (Support /api/v1, /api, and direct root endpoints like /auth/login)
 app.use('/api/v1', apiRoutes);
+app.use('/api', apiRoutes);
+app.use('/', apiRoutes);
 
 // Compatibility fallback for legacy /uploads endpoint
 app.use('/api/getUserRole', (req, res) => {
@@ -81,7 +87,7 @@ app.use(errorHandler);
 // 10. Start Server and Test DB Connection
 const server = app.listen(env.PORT, async () => {
   console.log('='.repeat(60));
-  console.log(`🚀 ALRO Land Management API Server v2.0 is running!`);
+  console.log(`🚀 ALRO Land Management API Server is running!`);
   console.log(`📡 URL: http://localhost:${env.PORT}`);
   console.log(`🌍 Environment: ${env.NODE_ENV}`);
   console.log(`📂 API Base: http://localhost:${env.PORT}/api/v1`);
