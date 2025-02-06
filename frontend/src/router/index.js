@@ -23,25 +23,25 @@ const routes = [
     path: '/',
     name: 'MapExplorer',
     component: MapExplorerView,
-    meta: { title: 'แผนที่แปลงที่ดิน (GIS) | ส.ป.ก.' }
+    meta: { title: 'แผนที่แปลงที่ดิน (GIS) | Community Land Management' }
   },
   {
     path: '/dashboard',
     name: 'Dashboard',
     component: DashboardView,
-    meta: { title: 'แดชบอร์ดสถิติ | ส.ป.ก.' }
+    meta: { title: 'แดชบอร์ดสถิติ | Community Land Management' }
   },
   {
     path: '/search',
     name: 'PublicSearch',
     component: PublicSearchView,
-    meta: { title: 'สืบค้นแปลงที่ดิน ส.ป.ก. 4-01 | ประชาชน' }
+    meta: { title: 'สืบค้นแปลงที่ดิน | Community Land Management' }
   },
   {
     path: '/login',
     name: 'Login',
     component: LoginView,
-    meta: { title: 'เข้าสู่ระบบเจ้าหน้าที่ | ส.ป.ก.', guestOnly: true }
+    meta: { title: 'เข้าสู่ระบบเจ้าหน้าที่ | Community Land Management', guestOnly: true }
   },
 
   // Land Management Routes (Officers & Admin)
@@ -49,25 +49,25 @@ const routes = [
     path: '/lands',
     name: 'LandList',
     component: LandListView,
-    meta: { title: 'จัดการแปลงที่ดิน | ส.ป.ก.', minRole: 1 }
+    meta: { title: 'จัดการแปลงที่ดิน | Community Land Management', minRole: 1 }
   },
   {
     path: '/lands/create',
     name: 'LandCreate',
     component: LandFormView,
-    meta: { title: 'เพิ่มแปลงที่ดินใหม่ | ส.ป.ก.', minRole: 2 }
+    meta: { title: 'เพิ่มแปลงที่ดินใหม่ | Community Land Management', minRole: 2 }
   },
   {
     path: '/lands/:id',
     name: 'LandDetail',
     component: LandDetailView,
-    meta: { title: 'รายละเอียดแปลงที่ดิน | ส.ป.ก.', minRole: 1 }
+    meta: { title: 'รายละเอียดแปลงที่ดิน | Community Land Management', minRole: 1 }
   },
   {
     path: '/lands/:id/edit',
     name: 'LandEdit',
     component: LandFormView,
-    meta: { title: 'แก้ไขแปลงที่ดิน | ส.ป.ก.', minRole: 2 }
+    meta: { title: 'แก้ไขแปลงที่ดิน | Community Land Management', minRole: 2 }
   },
 
   // Citizen Management Routes
@@ -75,25 +75,25 @@ const routes = [
     path: '/citizens',
     name: 'CitizenList',
     component: CitizenListView,
-    meta: { title: 'ทะเบียนข้อมูลราษฎร | ส.ป.ก.', minRole: 1 }
+    meta: { title: 'ทะเบียนข้อมูลราษฎร | Community Land Management', minRole: 1 }
   },
   {
     path: '/citizens/create',
     name: 'CitizenCreate',
     component: CitizenFormView,
-    meta: { title: 'เพิ่มข้อมูลราษฎรใหม่ | ส.ป.ก.', minRole: 2 }
+    meta: { title: 'เพิ่มข้อมูลราษฎรใหม่ | Community Land Management', minRole: 2 }
   },
   {
     path: '/citizens/:id_card',
     name: 'CitizenDetail',
     component: CitizenDetailView,
-    meta: { title: 'ประวัติข้อมูลราษฎร | ส.ป.ก.', minRole: 1 }
+    meta: { title: 'ประวัติข้อมูลราษฎร | Community Land Management', minRole: 1 }
   },
   {
     path: '/citizens/:id_card/edit',
     name: 'CitizenEdit',
     component: CitizenFormView,
-    meta: { title: 'แก้ไขข้อมูลราษฎร | ส.ป.ก.', minRole: 2 }
+    meta: { title: 'แก้ไขข้อมูลราษฎร | Community Land Management', minRole: 2 }
   },
 
   // Heir Management Routes
@@ -101,7 +101,7 @@ const routes = [
     path: '/heirs/create',
     name: 'HeirCreate',
     component: HeirFormView,
-    meta: { title: 'เพิ่มและผูกสิทธิ์ทายาท | ส.ป.ก.', minRole: 2 }
+    meta: { title: 'เพิ่มและผูกสิทธิ์ทายาท | Community Land Management', minRole: 2 }
   },
 
   // 404 Not Found
@@ -109,7 +109,7 @@ const routes = [
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: NotFoundView,
-    meta: { title: '404 ไม่พบหน้า | ส.ป.ก.' }
+    meta: { title: '404 ไม่พบหน้า | Community Land Management' }
   }
 ];
 

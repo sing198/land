@@ -1,6 +1,12 @@
-# ระบบบริหารจัดการข้อมูลที่ดินและราษฎร ส.ป.ก. (ALRO Land & Citizen Management System)
+# Community Land Management
 
-ระบบเว็บแอปพลิเคชันเพื่อการบริหารจัดการข้อมูลแปลงที่ดิน ส.ป.ก. 4-01, ทะเบียนราษฎรผู้ได้รับสิทธิ์, ระบบสืบทอดทายาท, แผนที่เชิงพื้นที่ (GIS) และการวิเคราะห์ข้อมูลสถิติ (Real-time Analytics Dashboard) สำหรับสำนักงานการปฏิรูปที่ดินเพื่อเกษตรกรรม (ส.ป.ก.)
+*University Final Project · 2024*
+
+**Land Management System for Sathiit Walailak Community**
+
+A web application for mapping land parcels and managing community land records, built with Vue.js, Node.js, and MariaDB.
+
+โครงงานจบระดับมหาวิทยาลัยสำหรับการจัดการข้อมูลที่ดินในชุมชนสาธิตวลัยลักษณ์ ครอบคลุมข้อมูลแปลงที่ดิน ข้อมูลราษฎร ทายาท แผนที่ และแดชบอร์ดสถิติ
 
 ---
 
@@ -14,7 +20,7 @@
 2. **ระบบจัดการสิทธิ์ผู้ใช้งาน (Role-Based Access Control - RBAC)**
    - `Role 0 (User)`: ประชาชนทั่วไป (สืบค้นข้อมูลแปลงที่ดิน, ดูแผนที่ GIS ภาพรวม)
    - `Role 1 (Legal Officer)`: เจ้าหน้าที่ฝ่ายกฎหมาย (ดูรายละเอียดข้อมูลแปลงที่ดิน, ราษฎร, และทายาท)
-   - `Role 2 (Land Reform Officer)`: เจ้าหน้าที่ปฏิรูปที่ดิน (เพิ่ม/แก้ไขแปลงที่ดิน, ราษฎร, ผูกสิทธิ์ทายาท, แนบเอกสาร)
+   - `Role 2 (Land Officer)`: เจ้าหน้าที่จัดการที่ดิน (เพิ่ม/แก้ไขแปลงที่ดิน, ราษฎร, ผูกสิทธิ์ทายาท, แนบเอกสาร)
    - `Role 3 (Admin)`: ผู้ดูแลระบบสูงสุด (จัดการข้อมูลทั้งหมด ลบข้อมูล จัดการผู้ใช้)
 
 3. **แผนที่ภูมิสารสนเทศเชิงโต้ตอบ (Interactive GIS Leaflet)**
@@ -90,7 +96,7 @@ npm run dev     # เซิร์ฟเวอร์จะรันที่ http
 
 > **บัญชีผู้ใช้สำหรับทดสอบ (Mock Accounts):**
 > - **ผู้ดูแลระบบ (Admin):** Username: `admin` | Password: `Admin@123456`
-> - **เจ้าหน้าที่ ส.ป.ก. (Land Officer):** Username: `officer_land` | Password: `Admin@123456`
+> - **เจ้าหน้าที่จัดการที่ดิน (Land Officer):** Username: `officer_land` | Password: `Admin@123456`
 > - **นิติกร (Legal Officer):** Username: `officer_legal` | Password: `Admin@123456`
 
 ### 3. รันระบบ Frontend

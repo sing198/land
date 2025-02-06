@@ -31,7 +31,7 @@
           <div class="space-y-1">
             <div class="flex items-center space-x-2">
               <span class="px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-xs font-bold uppercase tracking-wider">
-                แปลง ส.ป.ก. 4-01
+                แปลงที่ดินชุมชน
               </span>
               <span class="text-xs text-slate-400 font-mono">ID: #{{ land.id_land }}</span>
             </div>

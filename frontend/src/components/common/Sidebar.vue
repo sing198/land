@@ -64,7 +64,7 @@
         >
           <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0"></div>
           <div v-if="isOpen" class="text-xs text-slate-500 truncate">
-            <span class="font-semibold text-slate-700">ระบบ ส.ป.ก. 4-01</span>
+            <span class="font-semibold text-slate-700">ระบบจัดการที่ดินชุมชน</span>
             <p>ระบบออนไลน์พร้อมใช้งาน</p>
           </div>
         </div>

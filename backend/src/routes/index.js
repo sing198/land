@@ -23,7 +23,7 @@ router.get('/health', (req, res) => {
   res.json({
     status: 'UP',
     timestamp: new Date().toISOString(),
-    service: 'ALRO Land Management System API v2'
+    service: 'Community Land Management API v2'
   });
 });
 

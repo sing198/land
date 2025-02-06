@@ -4,10 +4,12 @@
       <!-- Logo and Header -->
       <div class="text-center space-y-2">
         <div class="w-16 h-16 bg-emerald-600 text-white font-bold text-2xl rounded-2xl flex items-center justify-center mx-auto shadow-md shadow-emerald-600/20">
-          ส
+          C
         </div>
         <h2 class="text-2xl font-bold text-slate-900 pt-2">เข้าสู่ระบบเจ้าหน้าที่</h2>
-        <p class="text-xs text-slate-500">ระบบบริหารจัดการข้อมูลที่ดินและราษฎร ส.ป.ก. 4-01</p>
+        <p class="text-sm font-semibold text-slate-700">Community Land Management</p>
+        <p class="text-xs text-emerald-700">University Final Project · 2024</p>
+        <p class="text-xs text-slate-500">Land Management System for Sathiit Walailak Community</p>
       </div>
 
       <!-- Error Alert -->
@@ -83,7 +85,7 @@
             @click="fillDemo('officer_land', 'Admin@123456')"
             class="p-2 text-xs font-semibold rounded-lg bg-slate-100 hover:bg-emerald-50 hover:text-emerald-700 text-slate-700 transition text-center"
           >
-            เจ้าหน้าที่ ส.ป.ก.
+            เจ้าหน้าที่จัดการที่ดิน
           </button>
           <button
             @click="fillDemo('officer_legal', 'Admin@123456')"

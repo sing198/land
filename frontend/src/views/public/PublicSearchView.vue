@@ -7,9 +7,9 @@
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
         </svg>
       </div>
-      <h2 class="text-3xl font-bold text-slate-900">ระบบสืบค้นข้อมูลแปลงที่ดิน ส.ป.ก. 4-01</h2>
+      <h2 class="text-3xl font-bold text-slate-900">ระบบสืบค้นข้อมูลแปลงที่ดินชุมชน</h2>
       <p class="text-slate-500 max-w-xl mx-auto text-sm sm:text-base">
-        บริการสืบค้นข้อมูลแปลงที่ดินในเขตปฏิรูปที่ดินเพื่อเกษตรกรรม สำหรับประชาชนทั่วไป
+        บริการสืบค้นข้อมูลแปลงที่ดินในชุมชนสาธิตวลัยลักษณ์ สำหรับประชาชนทั่วไป
       </p>
     </div>
 

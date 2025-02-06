@@ -1,7 +1,7 @@
 {
   "name": "alro-land-backend",
   "version": "2.0.0",
-  "description": "ALRO Land & Citizen Management System RESTful API",
+  "description": "Community Land Management RESTful API",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

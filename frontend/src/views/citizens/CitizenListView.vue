@@ -3,8 +3,8 @@
     <!-- Header -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <div>
-        <h2 class="text-2xl font-bold text-slate-900">ทะเบียนข้อมูลราษฎร ส.ป.ก.</h2>
-        <p class="text-sm text-slate-500">รายชื่อเกษตรกรและราษฎรผู้ได้รับสิทธิ์ถือครองที่ดินในเขตปฏิรูป</p>
+        <h2 class="text-2xl font-bold text-slate-900">ทะเบียนข้อมูลราษฎรในชุมชน</h2>
+        <p class="text-sm text-slate-500">รายชื่อราษฎรผู้ได้รับสิทธิ์ถือครองที่ดินในชุมชน</p>
       </div>
 
       <router-link

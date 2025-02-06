@@ -40,7 +40,7 @@
         <StatCard
           title="เนื้อที่รวมทั้งหมด"
           :value="formattedTotalRai"
-          subtitle="ไร่ (ส.ป.ก.)"
+          subtitle="ไร่"
           type="amber"
           icon="area"
         />

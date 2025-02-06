@@ -4,7 +4,7 @@
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <div>
         <h2 class="text-2xl font-bold text-slate-900">แผนที่แปลงที่ดินเชิงพื้นที่ (GIS Land Explorer)</h2>
-        <p class="text-sm text-slate-500">แสดงขอบเขตและตำแหน่งแปลงที่ดิน ส.ป.ก. 4-01 ในเขตปฏิรูปที่ดิน</p>
+        <p class="text-sm text-slate-500">แสดงขอบเขตและตำแหน่งแปลงที่ดินในชุมชนสาธิตวลัยลักษณ์</p>
       </div>
 
       <div class="flex items-center space-x-3">

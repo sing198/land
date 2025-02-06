@@ -19,11 +19,11 @@
               ส
             </div>
             <div>
-              <h1 class="text-base sm:text-lg font-bold text-slate-800 leading-tight">
-                ระบบจัดการที่ดิน ส.ป.ก.
+              <h1 class="text-sm sm:text-lg font-bold text-slate-800 leading-tight">
+                Community Land Management
               </h1>
               <p class="text-xs text-slate-500 hidden sm:block">
-                ALRO Land & Citizen Management System
+                University Final Project · 2024
               </p>
             </div>
           </div>

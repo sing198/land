@@ -1,5 +1,5 @@
 -- ============================================================================
--- ALRO Land & Citizen Management System Database Schema
+-- Community Land Management Database Schema
 -- Database: alro_land
 -- MariaDB / MySQL Compatible
 -- ============================================================================

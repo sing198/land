@@ -3,7 +3,7 @@
     <div class="flex items-center justify-between mb-4">
       <div>
         <h3 class="text-base font-bold text-slate-800">จำนวนแปลงที่ดินแยกตามซอย</h3>
-        <p class="text-xs text-slate-500">การกระจายตัวของแปลงที่ดิน ส.ป.ก. ในแต่ละซอย</p>
+        <p class="text-xs text-slate-500">การกระจายตัวของแปลงที่ดินในชุมชนแต่ละซอย</p>
       </div>
     </div>
 

@@ -57,7 +57,7 @@ app.use('/uploads', express.static(path.resolve(__dirname, 'uploads')));
 app.get('/', (req, res) => {
   res.json({
     success: true,
-    message: 'ALRO Land & Citizen Management System API is running online',
+    message: 'Community Land Management API is running online',
     status: 'healthy',
     api_base: '/api/v1'
   });
@@ -87,7 +87,7 @@ app.use(errorHandler);
 // 10. Start Server and Test DB Connection
 const server = app.listen(env.PORT, async () => {
   console.log('='.repeat(60));
-  console.log(`🚀 ALRO Land Management API Server is running!`);
+  console.log(`🚀 Community Land Management API Server is running!`);
   console.log(`📡 URL: http://localhost:${env.PORT}`);
   console.log(`🌍 Environment: ${env.NODE_ENV}`);
   console.log(`📂 API Base: http://localhost:${env.PORT}/api/v1`);

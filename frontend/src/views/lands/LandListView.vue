@@ -3,8 +3,8 @@
     <!-- Header -->
     <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
       <div>
-        <h2 class="text-2xl font-bold text-slate-900">จัดการข้อมูลแปลงที่ดิน ส.ป.ก.</h2>
-        <p class="text-sm text-slate-500">รายการแปลงที่ดิน ส.ป.ก. 4-01 ทั้งหมดในระบบ</p>
+        <h2 class="text-2xl font-bold text-slate-900">จัดการข้อมูลแปลงที่ดินชุมชน</h2>
+        <p class="text-sm text-slate-500">รายการแปลงที่ดินทั้งหมดในชุมชน</p>
       </div>
 
       <router-link
@@ -102,7 +102,7 @@
               <td class="py-3.5 px-4 text-slate-600">{{ land.land_use_type || '-' }}</td>
               <td class="py-3.5 px-4">
                 <span class="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold bg-emerald-50 text-emerald-700 border border-emerald-100">
-                  {{ land.land_status_name || 'ส.ป.ก. 4-01' }}
+                  {{ land.land_status_name || 'ไม่ระบุสถานะ' }}
                 </span>
               </td>
               <td class="py-3.5 px-4 text-center">

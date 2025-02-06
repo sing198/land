@@ -60,7 +60,7 @@ const props = defineProps({
   },
   initialCenter: {
     type: Array,
-    default: () => [8.641007, 99.853378] // Nakhon Si Thammarat ALRO area
+    default: () => [8.641007, 99.853378] // Default map center in Nakhon Si Thammarat
   },
   initialZoom: {
     type: Number,

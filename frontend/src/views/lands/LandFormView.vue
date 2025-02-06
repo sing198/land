@@ -6,7 +6,7 @@
         <h2 class="text-2xl font-bold text-slate-900">
           {{ isEdit ? `แก้ไขข้อมูลแปลงที่ดิน (แปลงเลขที่ ${form.tf_number})` : 'บันทึกข้อมูลแปลงที่ดินใหม่' }}
         </h2>
-        <p class="text-sm text-slate-500">กรอกข้อมูลรายละเอียดแปลงที่ดิน ส.ป.ก. 4-01 ให้ครบถ้วน</p>
+        <p class="text-sm text-slate-500">กรอกข้อมูลรายละเอียดแปลงที่ดินในชุมชนให้ครบถ้วน</p>
       </div>
 
       <router-link

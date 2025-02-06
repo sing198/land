@@ -1,5 +1,5 @@
 -- ============================================================================
--- ALRO Land & Citizen Management System Mock-up Seed Data
+-- Community Land Management Mock-up Seed Data
 -- Database: alro_land
 -- ข้อมูลจำลองสำหรับทดสอบระบบ (Mock-up Data Only - No Real Personal Data)
 -- ============================================================================
@@ -26,7 +26,7 @@ SET FOREIGN_KEY_CHECKS = 1;
 INSERT INTO `roles` (`role_id`, `role_name`, `description`) VALUES
 (0, 'User', 'ประชาชนทั่วไป ค้นหาข้อมูลแปลงที่ดินและตรวจสอบสิทธิ์'),
 (1, 'Legal Officer', 'เจ้าหน้าที่ฝ่ายกฎหมาย ตรวจสอบสิทธิ์และข้อพิพาท'),
-(2, 'Land Reform Officer', 'เจ้าหน้าที่ปฏิรูปที่ดิน จัดการแปลงที่ดินและราษฎร'),
+(2, 'Land Officer', 'เจ้าหน้าที่จัดการที่ดิน จัดการแปลงที่ดินและราษฎร'),
 (3, 'Admin', 'ผู้ดูแลระบบสูงสุด จัดการข้อมูลและสิทธิ์การใช้งานทั้งหมด');
 
 -- 2. Insert Prefixes (คำนำหน้าชื่อ)
@@ -73,9 +73,9 @@ INSERT INTO `alleys` (`id_alley`, `alley_number`, `alley_name`) VALUES
 
 -- 6. Insert Mock Users (รหัสผ่านทดสอบ: Admin@123456)
 INSERT INTO `users` (`id`, `username`, `password_hash`, `full_name`, `email`, `role_id`, `is_active`) VALUES
-(1, 'admin', '$2a$10$vPjY/HnxaJg0i7We2nAtw..86ZPTruMwLilGRG3i3Lh1olpAXOjk6', 'ผู้ดูแลระบบ ส.ป.ก. (จำลอง)', 'admin.mock@alro.example.go.th', 3, 1),
-(2, 'officer_land', '$2a$10$vPjY/HnxaJg0i7We2nAtw..86ZPTruMwLilGRG3i3Lh1olpAXOjk6', 'เจ้าหน้าที่จัดที่ดิน (จำลอง)', 'land_officer.mock@alro.example.go.th', 2, 1),
-(3, 'officer_legal', '$2a$10$vPjY/HnxaJg0i7We2nAtw..86ZPTruMwLilGRG3i3Lh1olpAXOjk6', 'นิติกรตรวจสอบสิทธิ์ (จำลอง)', 'legal_officer.mock@alro.example.go.th', 1, 1);
+(1, 'admin', '$2a$10$vPjY/HnxaJg0i7We2nAtw..86ZPTruMwLilGRG3i3Lh1olpAXOjk6', 'ผู้ดูแลระบบชุมชน (จำลอง)', 'admin.mock@community.example.com', 3, 1),
+(2, 'officer_land', '$2a$10$vPjY/HnxaJg0i7We2nAtw..86ZPTruMwLilGRG3i3Lh1olpAXOjk6', 'เจ้าหน้าที่จัดที่ดิน (จำลอง)', 'land_officer.mock@community.example.com', 2, 1),
+(3, 'officer_legal', '$2a$10$vPjY/HnxaJg0i7We2nAtw..86ZPTruMwLilGRG3i3Lh1olpAXOjk6', 'นิติกรตรวจสอบสิทธิ์ (จำลอง)', 'legal_officer.mock@community.example.com', 1, 1);
 
 -- 7. Insert Mock Citizens (ราษฎรจำลองทั้งหมด)
 INSERT INTO `citizens` (`id_card`, `prefix_id`, `first_name`, `last_name`, `birthday`, `gender`, `house_number`, `village_number`, `subdistrict`, `district`, `province`, `soi`, `phone_number`) VALUES

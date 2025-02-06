@@ -52,7 +52,7 @@
           <button
             @click="resetView"
             type="button"
-            title="รีเซ็ตมุมมองไปยังศูนย์กลาง ส.ป.ก."
+            title="รีเซ็ตมุมมองแผนที่เริ่มต้น"
             class="self-end p-2.5 bg-white/90 backdrop-blur-md text-slate-700 hover:text-emerald-600 rounded-xl shadow-md border border-slate-200 transition"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -114,7 +114,7 @@ let tileLayer = null;
 const currentLayer = ref('osm');
 const selectedCoords = ref(null);
 
-// Default Center for Krung Ching ALRO area
+// Default map center
 const DEFAULT_CENTER = [8.654019, 99.851781];
 const DEFAULT_ZOOM = 14;
 

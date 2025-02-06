@@ -105,7 +105,7 @@
               <div class="flex items-center justify-between">
                 <span class="text-base font-bold text-slate-900">แปลงเลขที่ {{ l.tf_number }}</span>
                 <span class="text-xs px-2.5 py-0.5 bg-emerald-100 text-emerald-800 rounded-full font-bold">
-                  {{ l.land_use_type || 'ส.ป.ก.' }}
+                  {{ l.land_use_type || 'ไม่ระบุประเภท' }}
                 </span>
               </div>
               <p class="text-xs text-slate-500">ระวาง ส.ป.ก.: <span class="font-semibold text-slate-700">{{ l.spk_area }}</span> (ซอย {{ l.current_soi }})</p>

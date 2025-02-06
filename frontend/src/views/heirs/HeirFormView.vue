@@ -4,7 +4,7 @@
     <div class="flex items-center justify-between">
       <div>
         <h2 class="text-2xl font-bold text-slate-900">เพิ่มและผูกสิทธิ์ทายาท</h2>
-        <p class="text-sm text-slate-500">บันทึกข้อมูลทายาทและผูกความสัมพันธ์กับราษฎรเจ้าของสิทธิ์ที่ดิน ส.ป.ก.</p>
+        <p class="text-sm text-slate-500">บันทึกข้อมูลทายาทและผูกความสัมพันธ์กับราษฎรเจ้าของสิทธิ์ที่ดินในชุมชน</p>
       </div>
 
       <router-link
