@@ -1,8 +1,10 @@
 # Community Land Management
 
-*University Final Project · 2024*
+**Vue 3 · Bulma / Tailwind CSS · Node.js · Express · MariaDB · Leaflet GIS**
 
-**Land Management System for Sathiit Walailak Community**
+**[Live Demo](https://community-land.vercel.app/) · [Architecture & Case Study](https://thanaphat-ku.is-a.dev/#case-study-land) · [Author Portfolio](https://thanaphat-ku.is-a.dev)**
+
+**Land Information Management System for Walailak Demonstration Community Area (Walailak University & ALRO / ส.ป.ก.)**
 
 A web application for mapping land parcels and managing community land records, built with Vue.js, Node.js, and MariaDB.
 
